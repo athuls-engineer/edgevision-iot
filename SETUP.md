@@ -49,7 +49,7 @@ VisionSentinel is a modular Edge AI computer vision and surveillance gateway des
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/Dull-legend7/edgevision-iot.git
+git clone https://github.com/athuls-engineer/edgevision-iot.git
 cd edgevision-iot
 ```
 

@@ -61,7 +61,7 @@ For an in-depth setup, hardware requirements, REST API reference, and Docker dep
 
 ```bash
 # Clone the repository
-git clone https://github.com/Dull-legend7/edgevision-iot.git
+git clone https://github.com/athuls-engineer/edgevision-iot.git
 cd edgevision-iot
 
 # Activate your virtual environment
@@ -125,5 +125,5 @@ edgevision-iot/
 
 **Athul S**  
 * Electronics and Communication Engineering Undergraduate  
-* GitHub: [@Dull-legend7](https://github.com/Dull-legend7)  
+* GitHub: [@athuls-engineer](https://github.com/athuls-engineer)  
 * LinkedIn: [linkedin.com/in/athul-s-engineer](https://www.linkedin.com/in/athul-s-engineer)
