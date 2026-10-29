@@ -4,6 +4,7 @@ Real-Time Video Analytics & Antivirus-Safe Telemetry Sync
 """
 import os
 import time
+from contextlib import asynccontextmanager
 from fastapi import FastAPI, HTTPException, Response
 from fastapi.responses import StreamingResponse, HTMLResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
@@ -33,10 +34,17 @@ vision = VisionPipeline(config.get("vision"), recorder=recorder, alert_mgr=alert
 def create_app(config_path: str = None) -> FastAPI:
     return app
 
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    vision.start()
+    yield
+    vision.stop()
+
 app = FastAPI(
     title="VisionSentinel: Real-Time Edge AI Security System",
     description="Edge Computer Vision, Real Intrusion Analytics & Evidence Recording",
-    version="2.0.0"
+    version="2.0.0",
+    lifespan=lifespan
 )
 
 app.add_middleware(
@@ -46,14 +54,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-@app.on_event("startup")
-def startup():
-    vision.start()
-
-@app.on_event("shutdown")
-def shutdown():
-    vision.stop()
 
 @app.get("/api/health")
 def health(response: Response):
