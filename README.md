@@ -127,3 +127,10 @@ edgevision-iot/
 * Electronics and Communication Engineering Undergraduate  
 * GitHub: [@athuls-engineer](https://github.com/athuls-engineer)  
 * LinkedIn: [linkedin.com/in/athul-s-engineer](https://www.linkedin.com/in/athul-s-engineer)
+
+---
+
+## 🤝 Authors & Contributors
+
+* **Athul S** ([@athuls-engineer](https://github.com/athuls-engineer)) — Creator & Embedded/Vision Developer
+* **Google Gemini** (AI Pair Programmer) — Co-developer assisting with OpenCV pipeline optimization, FastAPI async streaming, and pytest test suite implementation.
